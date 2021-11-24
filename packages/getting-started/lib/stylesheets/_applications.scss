@@ -20,3 +20,28 @@
 .datatable-search{
   max-width: 150px;
 }
+
+.signup-form {
+  margin-top: 1rem;
+  width: 35%;
+  margin-left: 1rem;
+  border-bottom: none !important;
+}
+
+.datatable-list {
+  padding-left: 3rem;
+}
+
+.accounts-ui, .document-new {
+  border-bottom: none !important;
+}
+
+.applications-form {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.applications-form > form {
+  width: 50%;
+}

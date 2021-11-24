@@ -2,8 +2,7 @@ a.btn,
 button.btn {
   &-primary {
     &, &:not(:disabled):not(.disabled).active {
-      background: $red;
-      border-color: $red;
+      background: $purple;
     }
   }
 }
@@ -11,7 +10,13 @@ button.btn {
 a:not(.btn) {
   &,
   &:link {
-    color: $red;
+    color: $purple;
     font-weight: bold;
   }
+}
+
+.modal-trigger > span > button {
+  background-color: #fff;
+  color: $purple;
+  border: $purple 1px solid;
 }

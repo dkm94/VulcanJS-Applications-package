@@ -3,16 +3,16 @@ import { addStrings, registerLocale } from 'meteor/vulcan:core';
 registerLocale({
   id: 'en',
   label: 'English',
-  required: true,
+  required: false,
 });
 
 registerLocale({
   id: 'fr',
   label: 'Français',
-  required: false,
+  required: true,
 });
 
-// uncomment on #Step19
-// addStrings('en', {
-//   'datatable.new': 'New Movie',
-// });
+addStrings('fr', {
+  'datatable.new': 'Nouvelle candidature',
+  'forms.submit': 'Soumettre',
+});

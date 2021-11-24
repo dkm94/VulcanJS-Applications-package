@@ -1,7 +1,5 @@
 const schema = {
 
-  // default properties
-
   _id: {
     type: String,
     optional: true,
@@ -15,14 +13,6 @@ const schema = {
       return new Date();
     },
   },
-  /* userId: {
-    type: String,
-    optional: true,
-    canRead: ['guests'],
-  }, */
-  
-  // custom properties
-
   firstName: {
     label: 'Prénom',
     type: String,
@@ -50,7 +40,7 @@ const schema = {
     canUpdate: ['members'],
   },
   isSelected: {
-  label: 'Selectionné',
+    label: 'Selectionné',
     type: Boolean,
     optional: true,
     hidden: true,

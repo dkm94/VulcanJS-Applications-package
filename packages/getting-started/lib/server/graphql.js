@@ -1,39 +1,32 @@
 import { GraphQLSchema, addGraphQLResolvers, addGraphQLQuery } from 'meteor/vulcan:core';
+import Applications from '../modules/collection';
 
-/*
-
-SchemaContents resolver
-
-Used to output the GraphQL schema as a string
-
-*/
 const schemaResolvers = {
+  //déclarer une requête
   Query: {
+    //nom de la requête
     schemaContents(root, args, context) {
       return GraphQLSchema.finalSchema[0];
     },
   },
 };
+// créer le resolver de schema
 addGraphQLResolvers(schemaResolvers);
-
+// stringify la query pour interprétation GraphQL
 addGraphQLQuery('schemaContents: String');
 
-/*
-
-ApplicationsCount resolver
-
-Used to display the total number of documents in the Applications collection
-
-*/
-import Applications from '../modules/collection';
 
 const applicationsCountResolvers = {
+  // créer une requête
   Query: {
+    // nom de la requête
     applicationsCount(root, args, context) {
       return Applications && Applications.find().count();
     },
   },
 };
-addGraphQLResolvers(applicationsCountResolvers);
 
+// créer le resolver totalCount
+addGraphQLResolvers(applicationsCountResolvers);
+// stringify la query pour interprétation GraphQL
 addGraphQLQuery('applicationsCount: Int');

@@ -5,6 +5,7 @@ import Applications from '../modules/collection.js';
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const markAsSelected = {
+  // déclarer une mutation
   Mutation: {
     async markAsSelected(root, { applicationId }, context) {
       // add a 2s delay to simulate a slower operation
@@ -21,8 +22,7 @@ const markAsSelected = {
   },
 };
 
-// créer un nouveau resolver
+//nouveau resolver
  addGraphQLResolvers(markAsSelected);
-
- //créer une nouvelle mutation
+ //nouvelle mutation GraphQL
  addGraphQLMutation('markAsSelected(applicationId: String): Application');
